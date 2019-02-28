@@ -1,6 +1,6 @@
 import os
 from app import app
-from controllers import auth, courses, companys
+from controllers import auth, companys, courses
 
 app.register_blueprint(auth.api, url_prefix='/api')
 app.register_blueprint(courses.api, url_prefix='/api')

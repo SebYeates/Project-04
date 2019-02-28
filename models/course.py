@@ -1,30 +1,33 @@
+from datetime import datetime
 from app import db, ma
 from marshmallow import fields
 from .base import BaseModel, BaseSchema
 # pylint: disable=W0611
-from .user import User
-from .company import Company
 
-companys_courses = db.Table('companys_courses',
-    db.Column('company_id', db.Integer, db.ForeignKey('companys.id'), primary_key=True),
-    db.Column('course_id', db.Integer, db.ForeignKey('courses.id'), primary_key=True)
-)
 
 class Course(db.Model, BaseModel):
 
     __tablename__ = 'courses'
 
-    title = db.Column(db.String(40), nullable=False)
-    filename = db.Column(db.String(80), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    user = db.relationship('User', backref='courses')
-    companys = db.relationship('Company', secondary=companys_courses, backref='courses')
+    name = db.Column(db.String(40), nullable=False)
+    description = db.Column(db.String(200), nullable=False)
+    image = db.Column(db.String(200), nullable=False)
+    address = db.Column(db.String(200), nullable=False)
+    location = db.Column(db.String(200), nullable=False)
+    category = []
+    company = []
+
+    start_date = db.Column(db.DateTime, default=datetime.utcnow)
+    end_date = db.Column(db.DateTime, default=datetime.utcnow)
+
+    # company_id = db.Column(db.Integer, db.ForeignKey('company.id'))
+    # company = db.relationship('Company', backref='courses')
 
 
 class CourseSchema(ma.ModelSchema, BaseSchema):
 
-    user = fields.Nested('UserSchema', exclude=('email', 'companys', 'courses'))
-    companys = fields.Nested('CompanySchema', exclude=('courses',), many=True)
+    company = fields.Nested('CompanySchema')
+
 
     class Meta:
         model = Course

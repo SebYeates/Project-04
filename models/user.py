@@ -59,8 +59,8 @@ class UserSchema(ma.ModelSchema, BaseSchema):
     )
     password_confirmation = fields.String(required=True)
 
-    likes = fields.Nested('MurdererSchema', many=True)
-    created_murderers = fields.Nested('MurdererSchema', many=True)
+    created_companys = fields.Nested('CompanySchema', many=False)
+
 
     class Meta:
         model = User
