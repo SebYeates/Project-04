@@ -48,12 +48,12 @@ class CoursesIndex extends React.Component {
   }
 
   render() {
-
+    console.log(this.state)
     if(this.state.courses.length === 0){
       return(
         <section className="section">
           <div className="container">
-            <h4 className="title is-4">Loading...</h4>
+            <h4 className="title is-4">Loadingqq...</h4>
           </div>
         </section>
       )
@@ -69,7 +69,7 @@ class CoursesIndex extends React.Component {
           <CoursesSearchForm handleChange={this.handleChange} />
           <div className="columns is-multiline">
             {this.filteredCourses().map(course =>
-              <div key={course._id} className="column is-one-quarter">
+              <div key={course.id} className="column is-one-quarter">
                 <CourseCard {...course} />
               </div>
             )}

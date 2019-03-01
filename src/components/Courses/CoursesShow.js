@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-import Map from '../common/Map'
+// import Map from '../common/Map'
 import Auth from '../../lib/Auth'
 
 import {Link} from 'react-router-dom'
@@ -13,8 +13,8 @@ class CoursesShow extends React.Component {
     this.state = {
       data: {},
       course: null,
-      courses: null,
-      userLocation: null
+      userLocation: null,
+      message: 'heya'
     }
 
     this.handleDelete = this.handleDelete.bind(this)
@@ -36,23 +36,24 @@ class CoursesShow extends React.Component {
   componentDidMount() {
     axios.get(`/api/courses/${this.props.match.params.id}`)
       .then(res => this.setState({ course: res.data }))
+      .then(() => console.log(this.state))
 
-    // also get the user location...
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.setState({
-          userLocation: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          }
-        })
-      })
-    }
+
+
+      // .then((res) => console.log('RES ----->', res.data))
+    // console.log('HETERET',this.props.match.params.id)s
+
   }
 
   render(){
-    if(!this.state.course) return null
-    const { _id, name, image, category, description, user, location, companys } = this.state.course
+    if(!this.state.course) {
+      console.log('this.state.course', this.state.course)
+      return null
+
+    }
+    console.log('this.state.course', this.state)
+    const { id, name, image, category, description, user, company } = this.state.course
+    console.log(description)
     return (
       <section className="section">
         <div className="container">
@@ -63,46 +64,24 @@ class CoursesShow extends React.Component {
               <figure className="image is-4by2">
                 <img src={image} alt={name} />
               </figure>
-              <div className="added-by">
-                <Link to={`/user/${user._id}`} className="title is-5 is-title-light">
-                  Added by: {user.username}<img  className="user-logo" src={user.image} alt={user.username} />
-                </Link>
-              </div>
             </div>
             <div className="column">
               <div className="content">
                 <h4 className="title is-4">Category: {category}</h4>
                 <h4 className="title is-4">Description</h4>
                 <p> {description}</p>
-                <h4 className="title is-4">Companys</h4>
-                {companys.map((company) => {
-                  return <Link to={`/companys/${company._id}`} className="button pill is-rounded" key={company._id}> {company.name} </Link>
-                })}
+                <h4 className="title is-4">Company</h4>
+                <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
+
                 <hr/>
-                {Auth.canEdit(user._id) && (
+                {Auth.canEdit(user.id) && (
                   <div>
-                    <Link to={`/courses/${_id}/edit`} className="button is-dark is-rounded"> Edit </Link>
+                    <Link to={`/courses/${id}/edit`} className="button is-dark is-rounded"> Edit </Link>
                     <button className="button is-dark is-rounded" onClick={this.handleDelete}> Delete </button>
                   </div>
                 )}
               </div>
             </div>
-          </div>
-        </div>
-        <div className="container">
-          <hr />
-          <div className="columns is-variable is-5">
-            <div className="column">
-              <div className="content">
-                <Map
-                  location={location}
-                  userLocation={this.state.userLocation}
-                  courses={[this.state.course]}
-                  type= "course"
-                />
-              </div>
-            </div>
-
           </div>
         </div>
       </section>

@@ -14,19 +14,21 @@ class Course(db.Model, BaseModel):
     image = db.Column(db.String(200), nullable=False)
     address = db.Column(db.String(200), nullable=False)
     location = db.Column(db.String(200), nullable=False)
-    category = []
-    company = []
+    category = db.Column(db.String(200), nullable=True)
+
 
     start_date = db.Column(db.DateTime, default=datetime.utcnow)
     end_date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    # company_id = db.Column(db.Integer, db.ForeignKey('company.id'))
-    # company = db.relationship('Company', backref='courses')
+    company_id = db.Column(db.Integer, db.ForeignKey('companies.id'))
+    company = db.relationship('Company', backref='courses')
 
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user = db.relationship('User', backref='courses')
 
 class CourseSchema(ma.ModelSchema, BaseSchema):
 
-    company = fields.Nested('CompanySchema')
+    company = fields.Nested('CompanySchema', exclude=('courses',))
 
 
     class Meta:

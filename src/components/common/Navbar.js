@@ -63,7 +63,7 @@ class Navbar extends React.Component {
           <div className={`navbar-menu ${this.state.navbarOpen ? 'is-active' : ''}`}>
             <div className="navbar-item has-dropdown is-hoverable navbar-start">
               <a
-                className="navbar-link has-text-white">
+                className="navbar-link has-text-black">
                 Discover
               </a>
               <div className="navbar-dropdown">
@@ -71,7 +71,7 @@ class Navbar extends React.Component {
                 Find Your next Course
                 </Link>
                 <hr className="navbar-divider" />
-                <Link to="/companys" className="navbar-item has-text-black">
+                <Link to="/companies" className="navbar-item has-text-black">
                  Find an RYA Sail School
                 </Link>
               </div>
@@ -81,7 +81,7 @@ class Navbar extends React.Component {
             <div className="navbar-end">
               {Auth.isAuthenticated() &&
                 <div className="navbar-item has-dropdown is-hoverable">
-                  <a className="navbar-link has-text-white">
+                  <a className="navbar-link has-text-black">
                    Add
                   </a>
                   <div className="navbar-dropdown">
@@ -89,17 +89,14 @@ class Navbar extends React.Component {
                      Your Courses
                     </Link>
                     <hr className="navbar-divider" />
-                    <Link to="/companys/new" className="navbar-item has-text-black">
+                    <Link to="/companies/new" className="navbar-item has-text-black">
                      Your Company
                     </Link>
                   </div>
                 </div>}
-              {Auth.isAuthenticated() &&<Link to={`/user/${Auth.getUserId()}`} className="navbar-item has-text-white">
-              Your Courses
-              </Link>}
               {!Auth.isAuthenticated() && <Link className="navbar-item has-text-white" to="/register">Sign Up</Link>}
               {!Auth.isAuthenticated() && <Link className="navbar-item has-text-white" to="/login">Login</Link>}
-              {Auth.isAuthenticated() && <a className="navbar-item has-text-white" onClick={this.logout}>Logout</a>}
+              {Auth.isAuthenticated() && <a className="navbar-item has-text-black" onClick={this.logout}>Logout</a>}
             </div>
           </div>
         </div>

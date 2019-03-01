@@ -4,7 +4,7 @@ import ReactFilestack from 'react-filestack'
 
 const fileStack = process.env.FILESTACK_API_KEY
 
-const CompanysForm = ({ data, handleChange, handleSubmit, errors }) => {
+const CompaniesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelect }) => {
 
   return (
     <div className="container">
@@ -70,7 +70,7 @@ const CompanysForm = ({ data, handleChange, handleSubmit, errors }) => {
                 value={data.address}
               />
             </div>
-            <button className="button is-rounded is-medium is-fullwidth is-primary">Create Company <i className="fas fa-map-signs homepage"></i>
+            <button className="button is-rounded is-medium is-fullwidth is-primary">Submit Company
             </button>
           </form>
         </div>
@@ -79,4 +79,4 @@ const CompanysForm = ({ data, handleChange, handleSubmit, errors }) => {
   )
 }
 
-export default CompanysForm
+export default CompaniesForm

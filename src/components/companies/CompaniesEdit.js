@@ -3,9 +3,9 @@ import axios from 'axios'
 
 import Auth from '../../lib/Auth'
 
-import CompanysForm from './CompanysForm'
+import CompaniesForm from './CompaniesForm'
 
-class CompanysEdit extends React.Component {
+class CompaniesEdit extends React.Component {
   constructor() {
     super()
 
@@ -36,22 +36,22 @@ class CompanysEdit extends React.Component {
     e.preventDefault()
     console.log(this.state.data)
     axios
-      .put(`/api/companys/${this.props.match.params.id}`, this.state.data, {
+      .put(`/api/companies/${this.props.match.params.id}`, this.state.data, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      .then(() => this.props.history.push('/companys'))
+      .then(() => this.props.history.push('/companies'))
       .catch((err) => this.setState({errors: err.response.data}))
   }
 
   componentDidMount() {
     axios
-      .get(`/api/companys/${this.props.match.params.id}`)
+      .get(`/api/companies/${this.props.match.params.id}`)
       .then(res => this.setState({ data: res.data }))
 
     axios.get('/api/courses')
       .then(res => {
         const options = res.data.map(course => {
-          return {'value': course._id, 'label': course.name}
+          return {'value': course.id, 'label': course.name}
         })
         this.setState({ options })
       })
@@ -60,7 +60,7 @@ class CompanysEdit extends React.Component {
   render() {
     return(
       <div className="section">
-        <CompanysForm
+        <CompaniesForm
           data={this.state.data}
           errors={this.state.errors}
           options = {this.state.options}
@@ -73,4 +73,4 @@ class CompanysEdit extends React.Component {
   }
 }
 
-export default CompanysEdit
+export default CompaniesEdit

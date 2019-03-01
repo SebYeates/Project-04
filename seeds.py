@@ -35,29 +35,35 @@ with app.app_context():
     db.session.add(user2)
 
     first = Course(
-        name='Things to learn',
+        name='This is first',
         description='This a text description',
-        image='croydoncourse.png',
+        image='/assets/images/picNpgx.jpg',
+        category='Sail Cruising',
         location='',
-        address=''
+        address='',
+        user=user1
         )
     db.session.add(first)
 
     second = Course(
-        name='Things to learn',
+        name='This is second',
         description='This a text description',
-        image='croydoncourse.png',
+        image='/assets/images/images.jpg',
+        category='Take courses online',
         location='',
-        address=''
+        address='london',
+        user=user1
         )
     db.session.add(second)
 
     thrird = Course(
-        name='Things to learn',
+        name='This is thrird',
         description='This a text description',
-        image='croydoncourse.png',
+        image='/assets/images/picNpgx.jpg',
+        category='Sail Cruising',
         location='',
-        address=''
+        address='London',
+        user=user2
     )
     db.session.add(thrird)
 
@@ -65,7 +71,7 @@ with app.app_context():
     sailcroydon = Company(
         name="Welcome to this company",
         description="This a text description",
-        image='croydoncourse.png',
+        image='/assets/images/unnamed.jpg',
         address='London',
         location='Also London',
         courses=[second],
@@ -76,7 +82,7 @@ with app.app_context():
     saillondon = Company(
         name="Welcome to this company",
         description="This a text description",
-        image='croydoncourse.png',
+        image='/assets/images/unnamed.jpg',
         address='London',
         location='Also London',
         courses=[thrird],

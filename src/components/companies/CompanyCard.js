@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CompanyCard = ({ _id, name, image, category, courses }) => {
+const CompanyCard = ({ id, name, image, category, courses }) => {
   return (
 
-    <Link to={`/companys/${_id}`}>
+    <Link to={`/companies/${id}`}>
       <div className="isImage thumbnail">
         <figure className="image is-4by3">
           <img src={image} alt={name} className="courseImage thumbnail"/>

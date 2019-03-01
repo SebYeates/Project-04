@@ -2,21 +2,21 @@ from flask import Blueprint, request, jsonify
 from models.company import Company, CompanySchema
 
 company_schema = CompanySchema()
-companys_schema = CompanySchema(many=True)
+companies_schema = CompanySchema(many=True)
 
-api = Blueprint('companys', __name__)
+api = Blueprint('companies', __name__)
 
-@api.route('/companys', methods=['GET'])
+@api.route('/companies', methods=['GET'])
 def index():
-    companys = Company.query.all()
-    return companys_schema.jsonify(companys)
+    companies = Company.query.all()
+    return companies_schema.jsonify(companies)
 
-@api.route('/companys/<int:company_id>', methods=['GET'])
+@api.route('/companies/<int:company_id>', methods=['GET'])
 def show(company_id):
     company = Company.query.get(company_id)
     return company_schema.jsonify(company)
 
-@api.route('/companys', methods=['POST'])
+@api.route('/companies', methods=['POST'])
 def create():
 
     company, errors = company_schema.load(request.get_json())
@@ -28,7 +28,7 @@ def create():
 
     return company_schema.jsonify(company)
 
-@api.route('/companys/<int:company_id>', methods=['PUT'])
+@api.route('/companies/<int:company_id>', methods=['PUT'])
 def update(company_id):
 
     company = Company.query.get(company_id)
@@ -41,7 +41,7 @@ def update(company_id):
 
     return company_schema.jsonify(company)
 
-@api.route('/companys/<int:company_id>', methods=['DELETE'])
+@api.route('/companies/<int:company_id>', methods=['DELETE'])
 def delete(company_id):
 
     company = Company.query.get(company_id)

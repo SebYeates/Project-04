@@ -3,9 +3,9 @@ import axios from 'axios'
 
 import Auth from '../../lib/Auth'
 
-import CompanysForm from './CompanysForm'
+import CompaniesForm from './CompaniesForm'
 
-class CompanysNew extends React.Component {
+class CompaniesNew extends React.Component {
   constructor() {
     super()
 
@@ -36,10 +36,10 @@ class CompanysNew extends React.Component {
     e.preventDefault()
     console.log(this.state.data)
     axios
-      .post('/api/companys', this.state.data, {
+      .post('/api/companies', this.state.data, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      .then(() => this.props.history.push('/companys'))
+      .then(() => this.props.history.push('/companies'))
       .catch((err) => this.setState({errors: err.response.data}))
   }
 
@@ -48,7 +48,7 @@ class CompanysNew extends React.Component {
       .then(res => {
         console.log(res)
         const options = res.data.map(course => {
-          return {'value': course._id, 'label': course.name}
+          return {'value': course.id, 'label': course.name}
         })
         this.setState({ options })
       })
@@ -57,7 +57,7 @@ class CompanysNew extends React.Component {
   render() {
     return(
       <div className="section">
-        <CompanysForm
+        <CompaniesForm
           data={this.state.data}
           errors={this.state.errors}
           options = {this.state.options}
@@ -70,4 +70,4 @@ class CompanysNew extends React.Component {
   }
 }
 
-export default CompanysNew
+export default CompaniesNew

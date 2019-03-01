@@ -11,16 +11,16 @@ import CoursesNew from './components/courses/CoursesNew'
 import CoursesEdit from './components/courses/CoursesEdit'
 import CoursesShow from './components/courses/CoursesShow'
 
-import CompanysIndex from './components/companys/CompanysIndex'
-import CompanysNew from './components/companys/CompanysNew'
-import CompanysEdit from './components/companys/CompanysEdit'
-import CompanysShow from './components/companys/CompanysShow'
+import CompaniesIndex from './components/companies/CompaniesIndex'
+import CompaniesNew from './components/companies/CompaniesNew'
+import CompaniesEdit from './components/companies/CompaniesEdit'
+import CompaniesShow from './components/companies/CompaniesShow'
 
 import SecureRoute from './components/common/SecureRoute'
 
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
-import UserShow from './components/user/UserShow'
+
 
 import Home from './components/pages/Home'
 import Navbar from './components/common/Navbar'
@@ -37,13 +37,12 @@ class App extends React.Component {
           <Switch>
             <SecureRoute path="/courses/new" component={CoursesNew} />
             <SecureRoute path="/courses/:id/edit" component={CoursesEdit} />
-            <Route path="/user/:id" component={UserShow} />
             <Route path="/courses/:id" component={CoursesShow} />
             <Route path="/courses" component={CoursesIndex} />
-            <SecureRoute path="/companys/new" component={CompanysNew} />
-            <SecureRoute path="/companys/:id/edit" component={CompanysEdit} />
-            <Route path="/companys/:id" component={CompanysShow} />
-            <Route path="/companys" component={CompanysIndex} />
+            <SecureRoute path="/companies/new" component={CompaniesNew} />
+            <SecureRoute path="/companies/:id/edit" component={CompaniesEdit} />
+            <Route path="/companies/:id" component={CompaniesShow} />
+            <Route path="/companies" component={CompaniesIndex} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/" component={Home} />

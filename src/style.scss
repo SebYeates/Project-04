@@ -45,7 +45,7 @@ nav.navbar{
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: white;
+  border-color: black;
 }
 
 a.navbar-item{
@@ -139,7 +139,7 @@ textarea.textarea {
   }
 }
 
-//---------------- hover effect on Courses/Companys index ----------------- >
+//---------------- hover effect on Courses/Companies index ----------------- >
 
 .middle {
   transition: .5s ease;
@@ -374,29 +374,6 @@ nav.navbar .other{
     opacity: 0
   }
 }
-//
-// .loader:empty {
-//     position: absolute;
-//     top: calc(50% - 15em);
-//     left: calc(50% - 10em);
-//     width: 20em;
-//     height: 20em;
-//     border: 1.5em solid orange;
-//     border-left: 1.5em solid dodgerblue;
-//     border-radius: 80%;
-//     border-right: 1.5em solid dodgerblue;
-//     animation: load8 3s infinite linear;
-//   }
-//
-//   @keyframes load8 {
-//     0% {
-//       transform: rotate(0deg);
-//     }
-//     100% {
-//       transform: rotate(360deg);
-//     }
-//   }
-
 a.button.pill {
   color: $primary;
   font-size: 16px;

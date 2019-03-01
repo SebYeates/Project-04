@@ -1,10 +1,10 @@
 import os
 from app import app
-from controllers import auth, companys, courses
+from controllers import auth, companies, courses
 
 app.register_blueprint(auth.api, url_prefix='/api')
 app.register_blueprint(courses.api, url_prefix='/api')
-app.register_blueprint(companys.api, url_prefix='/api')
+app.register_blueprint(companies.api, url_prefix='/api')
 
 
 @app.route('/', defaults={'path': ''}) # homepage
