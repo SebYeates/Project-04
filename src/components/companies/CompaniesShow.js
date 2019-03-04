@@ -66,7 +66,6 @@ class CompaniesShow extends React.Component {
                 {Auth.canEdit(user.id) && (
                   <div >
                     <Link to={`/companies/${id}/edit`} className="button is-dark is-rounded" >Edit </Link>
-                    <button className="button is-primary is-rounded " onClick={this.handleDelete}>Delete</button>
                   </div>
                 )}
               </div>

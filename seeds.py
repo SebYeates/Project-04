@@ -195,6 +195,94 @@ with app.app_context():
         )
     db.session.add(Copmcrew8)
 
+    addition1 = Course(
+        name='RYA Competent Crew',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Motor Cruising',
+        lat=0,
+        lng=0,
+        address='Aldenham Reservoir, Aldenham Road, Elstree, Borehamwood, Hertfordshire, WD6 3BD, UK'
+        )
+    db.session.add(addition1)
+
+    addition2 = Course(
+        name='RYA Navigation Basics',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Navigation & Seamanship Theory',
+        lat=0,
+        lng=0,
+        address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK'
+        )
+    db.session.add(addition2)
+
+    addition3 = Course(
+        name='RYA Radar Crew',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Specialist Short Courses',
+        lat=0,
+        lng=0,
+        address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK'
+        )
+    db.session.add(addition3)
+
+    addition4 = Course(
+        name='RYA Powerboat',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Powerboat',
+        lat=0,
+        lng=0,
+        address='Birchen Grove, London, NW9 8SA, UK'
+        )
+    db.session.add(addition4)
+
+    addition5 = Course(
+        name='RYA Dinghy',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Dinghy, Multihull & Small Keelboats',
+        lat=0,
+        lng=0,
+        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        )
+    db.session.add(addition5)
+
+    addition6 = Course(
+        name='RYA Windsurfing',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Windsurfing',
+        lat=0,
+        lng=0,
+        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        )
+    db.session.add(addition6)
+
+    addition7 = Course(
+        name='RYA Waterways',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Inland Waterways',
+        lat=0,
+        lng=0,
+        address='Mercury Yacht Harbour, Satchell Lane, Hamble Southampton SO31 4HQ'
+        )
+    db.session.add(addition7)
+
+    addition8 = Course(
+        name='RYA Certificates of Competence',
+        description='From small clubs specialising in particular classes through to large clubs with a host of activities across all boating disciplines there is a club to suit you and your family. The activities offered by the club are listed below but visit their website to find out more.',
+        image='/assets/images/picNpgx.jpg',
+        category='Certificates of Competence',
+        lat=0,
+        lng=0,
+        address='Falmouth Marina North Parade Falmouth Cornwall TR11 2TD'
+        )
+    db.session.add(addition8)
+
 
 
     Online1 = Course(
@@ -294,7 +382,7 @@ with app.app_context():
     address='Aldenham Reservoir, Aldenham Road, Elstree, Borehamwood, Hertfordshire, WD6 3BD, UK',
     lat=0,
     lng=0,
-    courses=[Copmcrew1, Online1],
+    courses=[Copmcrew1, Online1, addition1],
     user=user1
     )
     db.session.add(Aldenham)
@@ -307,7 +395,7 @@ with app.app_context():
         address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK',
         lat=0,
         lng=0,
-        courses=[Copmcrew2, Online2],
+        courses=[Copmcrew2, Online2, addition2],
         user=user2
     )
     db.session.add(Broadsword)
@@ -319,7 +407,7 @@ with app.app_context():
         address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK',
         lat=0,
         lng=0,
-        courses=[Copmcrew3, Online3],
+        courses=[Copmcrew3, Online3, addition3],
         user=user3
     )
     db.session.add(Phoenix)
@@ -331,7 +419,7 @@ with app.app_context():
         address='Birchen Grove, London, NW9 8SA, UK',
         lat=0,
         lng=0,
-        courses=[Copmcrew4, Online4],
+        courses=[Copmcrew4, Online4, addition4],
         user=user4
     )
     db.session.add(Wembley)
@@ -343,7 +431,7 @@ with app.app_context():
         address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK',
         lat=0,
         lng=0,
-        courses=[Copmcrew5, Online5],
+        courses=[Copmcrew5, Online5, addition5],
         user=user5
     )
     db.session.add(Broadsword)
@@ -355,7 +443,7 @@ with app.app_context():
         address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK',
         lat=0,
         lng=0,
-        courses=[Copmcrew6, Online6],
+        courses=[Copmcrew6, Online6, addition6],
         user=user6
     )
     db.session.add(Welsh)
@@ -367,7 +455,7 @@ with app.app_context():
         address='Mercury Yacht Harbour, Satchell Lane, Hamble Southampton SO31 4HQ',
         lat=0,
         lng=0,
-        courses=[Copmcrew7, Online7],
+        courses=[Copmcrew7, Online7, addition7],
         user=user7
     )
     db.session.add(Hamble)
@@ -379,7 +467,7 @@ with app.app_context():
         address='Falmouth Marina North Parade Falmouth Cornwall TR11 2TD',
         lat=0,
         lng=0,
-        courses=[Copmcrew8, Online8],
+        courses=[Copmcrew8, Online8, addition8],
         user=user8
     )
     db.session.add(Cornish)
