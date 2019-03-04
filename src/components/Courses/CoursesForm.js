@@ -1,7 +1,6 @@
 import React from 'react'
 import MapboxAutocomplete from 'react-mapbox-autocomplete'
 import ReactFilestack from 'react-filestack'
-import RegMap from '../common/RegMap'
 
 const fileStack = process.env.FILESTACK_API_KEY
 
@@ -124,10 +123,6 @@ const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelec
                 onchange={handleChange}
                 name="location"
                 value={data.address}
-              />
-              <RegMap
-                location={{ lat: data.lat, lng: data.lng }}
-                onChange={handleChange}
               />
               {errors.location && <small>{errors.location}</small>}
             </div>
