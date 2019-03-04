@@ -1,5 +1,6 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, g
 from models.company import Company, CompanySchema
+from lib.secure_route import secure_route
 
 company_schema = CompanySchema()
 companies_schema = CompanySchema(many=True)
@@ -17,6 +18,7 @@ def show(company_id):
     return company_schema.jsonify(company)
 
 @api.route('/companies', methods=['POST'])
+@secure_route
 def create():
 
     company, errors = company_schema.load(request.get_json())
@@ -24,14 +26,21 @@ def create():
     if errors:
         return jsonify(errors), 422
 
+    company.user = g.current_user
+
     company.save()
 
     return company_schema.jsonify(company)
 
 @api.route('/companies/<int:company_id>', methods=['PUT'])
+@secure_route
 def update(company_id):
 
     company = Company.query.get(company_id)
+
+    if company.user != g.current_user:
+        return jsonify({'message': 'Unauthorized'}), 401
+
     company, errors = company_schema.load(request.get_json(), instance=company)
 
     if errors:
@@ -42,9 +51,13 @@ def update(company_id):
     return company_schema.jsonify(company)
 
 @api.route('/companies/<int:company_id>', methods=['DELETE'])
+@secure_route
 def delete(company_id):
 
     company = Company.query.get(company_id)
+
+    if company.user != g.current_user:
+        return jsonify({'message': 'Unauthorized'}), 401
 
     company.remove()
 

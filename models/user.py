@@ -59,8 +59,7 @@ class UserSchema(ma.ModelSchema, BaseSchema):
     )
     password_confirmation = fields.String(required=True)
 
-    created_companies = fields.Nested('CompanySchema', many=False)
-    created_courses = fields.Nested('CourseSchema',)
+    company = fields.Nested('CompanySchema', exclude=('user',))
 
 
     class Meta:

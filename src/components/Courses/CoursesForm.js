@@ -6,7 +6,7 @@ import RegMap from '../common/RegMap'
 const fileStack = process.env.FILESTACK_API_KEY
 
 
-const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelect }) => {
+const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelect  }) => {
   return (
     <div className="container">
       <div className="column is-6 is-offset-3 ">
@@ -24,6 +24,32 @@ const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelec
                   value={data.name || ''}
                 />
                 {errors.name && <small className="help is-danger">{errors.name}</small>}
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Start Date</label>
+              <div className="control">
+                <input
+                  className="input"
+                  placeholder="Start Date"
+                  name="start_date"
+                  onChange={handleChange}
+                  value={data.start_date || ''}
+                />
+                {errors.start_date && <small className="help is-danger">{errors.start_date}</small>}
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">End Date</label>
+              <div className="control">
+                <input
+                  className="input"
+                  placeholder="End date"
+                  name="end_date"
+                  onChange={handleChange}
+                  value={data.end_date || ''}
+                />
+                {errors.end_date && <small className="help is-danger">{errors.end_date}</small>}
               </div>
             </div>
             <div className="field">
@@ -91,7 +117,7 @@ const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelec
             <label className="label">Location</label>
             <div className="control">
               <MapboxAutocomplete
-                publicKey= {process.env.MAP_BOX_TOKEN}
+                publicKey={process.env.MAP_BOX_TOKEN}
                 inputClass="input"
                 onSuggestionSelect={suggestionSelect}
                 resetSearch={false}
@@ -100,7 +126,7 @@ const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelec
                 value={data.address}
               />
               <RegMap
-                location={data.location}
+                location={{ lat: data.lat, lng: data.lng }}
                 onChange={handleChange}
               />
               {errors.location && <small>{errors.location}</small>}

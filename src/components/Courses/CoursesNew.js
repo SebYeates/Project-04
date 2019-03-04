@@ -14,10 +14,8 @@ class CoursesNew extends React.Component {
         image: '',
         description: '',
         address: '',
-        location: {
-          lat: 51.5327045,
-          lng: -0.1507498
-        }
+        lat: 51.5327045,
+        lng: -0.1507498
       },
       errors: ''
     }
@@ -33,15 +31,14 @@ class CoursesNew extends React.Component {
     this.setState({ data, errors })
   }
 
-  suggestionSelect(result, lat, lng, text) {
-    const data = {...this.state.data,
-      location: {
-        lat: lat,
-        lng: lng
-      },
-      address: result, text
+  suggestionSelect(result, lat, lng) {
+    const data = {
+      ...this.state.data,
+      lat: lat,
+      lng: lng,
+      address: result
     }
-    const errors = { ...this.state.errors, location: '' }
+    const errors = { ...this.state.errors, lat: '', lng: '' }
 
     this.setState({data, errors})
   }

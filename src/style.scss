@@ -70,23 +70,26 @@ a.navbar-item{
     transform: rotate(360deg);
 }
 
+.centred-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+}
+
 button.homesecond, button.home {
   color: white;
   justify-content: center;
   border-radius: 20px;
   border: 3px solid white;
   background-color: transparent;
-  position: absolute;
+  margin: 10px;
+
   left: 5%;
 }
 
-button.button.home {
-  top: 50%;
-}
-
-button.homesecond {
-  top: 40%;
-}
 
 button.companyBtn {
   color: white;
@@ -99,6 +102,7 @@ button.companyBtn {
 
 a.button.showCourseBtn, a.button.companyPageBtn{
   margin: 5px 5px 5px 0;
+  display: flex;
 }
 
 input.searchBar {
@@ -151,6 +155,9 @@ textarea.textarea {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  opacity: 3;
+  font-weight: 200px;
+  padding: 10% 10%;
 }
 
 .text {
@@ -159,7 +166,7 @@ textarea.textarea {
   padding: 10% 10%;
 }
 
-.isImage:hover .courseImage {
+.courseImage {
   opacity: 0.3;
 }
 
@@ -178,23 +185,26 @@ textarea.textarea {
 
 //---------- hide and show tèxt on homepage ----------->
 
-div.hoverShow {
- position: absolute;
- text-align: center;
- width: 60%;
- height: 50%;
- left: 23%;
- top: 20%;
- color: white;
- font-weight: 700;
- font-size: 3em;
- opacity: 0.0;
- transition: all 500ms ease-in-out;
-}
-
-a.hoverWrapper:hover + div.hoverShow {
-  opacity: 1.0;
-}
+// div.hoverShow1, div.hoverShow2 {
+//  position: absolute;
+//  text-align: center;
+//  width: 60%;
+//  height: 50%;
+//  left: 23%;
+//  top: 20%;
+//  color: white;
+//  font-weight: 700;
+//  font-size: 3em;
+//  opacity: 0.0;
+//  transition: all 500ms ease-in-out;
+// }
+//
+// a.hoverWrapper1:hover + div.hoverShow1 {
+//   opacity: 1.0;
+// }
+// a.hoverWrapper:hover + div.hoverShow {
+//   opacity: 1.0;
+// }
 
 
 //--------------------- MAP Styling -------------------------

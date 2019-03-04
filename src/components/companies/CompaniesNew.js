@@ -15,8 +15,21 @@ class CompaniesNew extends React.Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
-    this.handleMultiChange = this.handleMultiChange.bind(this)
+    // this.handleMultiChange = this.handleMultiChange.bind(this)
+    this.suggestionSelect = this.suggestionSelect.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  suggestionSelect(result, lat, lng) {
+    const data = {
+      ...this.state.data,
+      lat: lat,
+      lng: lng,
+      address: result
+    }
+    const errors = { ...this.state.errors, lat: '', lng: '' }
+
+    this.setState({data, errors})
   }
 
   handleChange({ target: { name, value } }) {
@@ -25,12 +38,12 @@ class CompaniesNew extends React.Component {
     this.setState({ data, errors })
   }
 
-  handleMultiChange(e) {
-    const courses = e.map(course => course.value)
-    const data = {...this.state.data, courses: courses }
-    const errors = { ...this.state.errors, courses: '' }
-    this.setState({ data, errors })
-  }
+  // handleMultiChange(e) {
+  //   const courses = e.map(course => course.value)
+  //   const data = {...this.state.data, courses: courses }
+  //   const errors = { ...this.state.errors, courses: '' }
+  //   this.setState({ data, errors })
+  // }
 
   handleSubmit(e) {
     e.preventDefault()
@@ -62,7 +75,7 @@ class CompaniesNew extends React.Component {
           errors={this.state.errors}
           options = {this.state.options}
           handleChange={this.handleChange}
-          handleMultiChange={this.handleMultiChange}
+          suggestionSelect={this.suggestionSelect}
           handleSubmit={this.handleSubmit}
         />
       </div>

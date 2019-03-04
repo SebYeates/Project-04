@@ -59,7 +59,7 @@ class CompaniesShow extends React.Component {
                 <h4 className="title is-4">Courses:</h4>
                 <div>
                   {courses.map((course, index) =>
-                    <Link to={`/courses/${course.id}`} className="button pill is-rounded" key={index}> {course.name}  {course.start_date} </Link>
+                    <Link to={`/courses/${course.id}`} className="button pill is-rounded" key={index}> {course.name}  </Link>
                   )}
                   <hr/>
                 </div>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CourseCard = ({ id, name, image, address }) => {
-  console.log(id, name, image, address)
+const CourseCard = ({ id, name, image, address, start_date }) => {
+  console.log(id, name, image, address, start_date)
   return (
     <Link to={`/courses/${id}`}>
       <div className="isImage">
@@ -10,7 +10,7 @@ const CourseCard = ({ id, name, image, address }) => {
           <img src={image} alt={name}  className="courseImage"/>
           <div className="middle">
             <div className="text">{name}</div>
-            <div className="text">{address}</div>
+            <div className="text">{start_date}</div>
           </div>
         </figure>
       </div>

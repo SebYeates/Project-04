@@ -53,7 +53,7 @@ class CoursesIndex extends React.Component {
       return(
         <section className="section">
           <div className="container">
-            <h4 className="title is-4">Loadingqq...</h4>
+            <h4 className="title is-4">Loading...</h4>
           </div>
         </section>
       )

@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 
-// import Map from '../common/Map'
 import Auth from '../../lib/Auth'
 
 import {Link} from 'react-router-dom'
@@ -40,7 +39,7 @@ class CoursesShow extends React.Component {
 
 
 
-      // .then((res) => console.log('RES ----->', res.data))
+    // .then((res) => console.log('RES ----->', res.data))
     // console.log('HETERET',this.props.match.params.id)s
 
   }
@@ -52,8 +51,7 @@ class CoursesShow extends React.Component {
 
     }
     console.log('this.state.course', this.state)
-    const { id, name, image, category, description, user, company } = this.state.course
-    console.log(description)
+    const { id, name, image, category, description, company, start_date, end_date, address } = this.state.course
     return (
       <section className="section">
         <div className="container">
@@ -67,14 +65,19 @@ class CoursesShow extends React.Component {
             </div>
             <div className="column">
               <div className="content">
+                <h4 className="title is-4">Address</h4>
+                <p> {address}</p>
                 <h4 className="title is-4">Category: {category}</h4>
                 <h4 className="title is-4">Description</h4>
                 <p> {description}</p>
                 <h4 className="title is-4">Company</h4>
                 <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
-
+                <h4 className="title is-4">Start Date</h4>
+                <p> {start_date}</p>
+                <h4 className="title is-4">End Date</h4>
+                <p> {end_date}</p>
                 <hr/>
-                {Auth.canEdit(user.id) && (
+                {Auth.canEdit(company.user.id) && (
                   <div>
                     <Link to={`/courses/${id}/edit`} className="button is-dark is-rounded"> Edit </Link>
                     <button className="button is-dark is-rounded" onClick={this.handleDelete}> Delete </button>

@@ -61,7 +61,7 @@ const CompaniesForm = ({ data, handleChange, handleSubmit, errors, suggestionSel
             <label className="label">Location</label>
             <div className="control">
               <MapboxAutocomplete
-                publicKey= {process.env.MAP_BOX_TOKEN}
+                publicKey={process.env.MAP_BOX_TOKEN}
                 inputClass="input"
                 onSuggestionSelect={suggestionSelect}
                 resetSearch={false}

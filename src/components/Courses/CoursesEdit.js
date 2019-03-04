@@ -15,7 +15,8 @@ class CoursesEdit extends React.Component {
         name: '',
         image: '',
         description: '',
-        location: null,
+        lat: '',
+        lng: '',
         address: ''
       },
       errors: ''
@@ -38,14 +39,14 @@ class CoursesEdit extends React.Component {
 
   suggestionSelect(result, lat, lng, text) {
     console.log(lat, lng)
-    const data = { ...this.state.data,
-      location: {
-        lat: lat,
-        lng: lng
-      },
-      address: result, text
+    const data = {
+      ...this.state.data,
+      lat: lat,
+      lng: lng,
+      address: result,
+      text
     }
-    const errors = { ...this.state.errors, location: '' }
+    const errors = { ...this.state.errors, lat: '', lng: '' }
 
     this.setState({ data, errors })
   }

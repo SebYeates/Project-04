@@ -8,8 +8,12 @@ class CompaniesIndex extends React.Component {
   constructor() {
     super()
     this.state = {
-      companies: []
+      companies: [],
+      location: '',
+      category: 'All'
     }
+
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -19,14 +23,17 @@ class CompaniesIndex extends React.Component {
 
   handleChange({ target: { name, value } }) {
     this.setState({ [name]: value })
+    console.log(this.state)
   }
 
   filteredCompanies() {
     const re = new RegExp(this.state.location, 'i')
-    if(!this.state.category && !this.state.location) return this.state.courses
-    return this.state.courses.filter(course => {
-      return re.test(course.address) && (this.state.category === 'All' || course.category === this.state.category)
+    if(!this.state.category && !this.state.location) return this.state.companies
+    return this.state.companies.filter(company => {
+      return re.test(company.address) && (this.state.category === 'All' || company.category === this.state.category)
     })
+
+
   }
 
   render() {
@@ -48,7 +55,7 @@ class CompaniesIndex extends React.Component {
           <hr />
           <CompaniesSearchForm handleChange={this.handleChange} />
           <div className="columns is-multiline">
-            {this.state.companies.map(company =>
+            {this.filteredCompanies().map(company =>
               <div key={company.id} className="column is-4">
                 <CompanyCard {...company} />
               </div>

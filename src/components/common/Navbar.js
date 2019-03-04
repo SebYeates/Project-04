@@ -63,7 +63,7 @@ class Navbar extends React.Component {
           <div className={`navbar-menu ${this.state.navbarOpen ? 'is-active' : ''}`}>
             <div className="navbar-item has-dropdown is-hoverable navbar-start">
               <a
-                className="navbar-link has-text-black">
+                className="navbar-link has-text-white">
                 Discover
               </a>
               <div className="navbar-dropdown">
@@ -94,8 +94,8 @@ class Navbar extends React.Component {
                     </Link>
                   </div>
                 </div>}
-              {!Auth.isAuthenticated() && <Link className="navbar-item has-text-white" to="/register">Sign Up</Link>}
-              {!Auth.isAuthenticated() && <Link className="navbar-item has-text-white" to="/login">Login</Link>}
+              {!Auth.isAuthenticated() && <Link className="navbar-item has-text-gray" to="/register">Sign Up</Link>}
+              {!Auth.isAuthenticated() && <Link className="navbar-item has-text-gray" to="/login">Login</Link>}
               {Auth.isAuthenticated() && <a className="navbar-item has-text-black" onClick={this.logout}>Logout</a>}
             </div>
           </div>

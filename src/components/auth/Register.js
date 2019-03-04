@@ -1,8 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import ReactFilestack from 'react-filestack'
 
-const fileStack = process.env.FILESTACK_API_KEY
 
 class Register extends React.Component {
   constructor() {
@@ -78,31 +76,6 @@ class Register extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label">Image</label>
-                  <div className="control">
-                    <ReactFilestack
-                      apikey={`${fileStack}`}
-                      mode={'pick'}
-                      onSuccess={(res) => this.handleChange({
-                        target: {
-                          name: 'image',
-                          value: res.filesUploaded[0].url
-                        }})}
-                      onError={(err) => console.log(err)}
-                      buttonText={'Add Image'}
-                      buttonClass={'button is-dark is-rounded'}
-                    />
-                    {this.state.data.image && <small> Imaged Uploaded</small>}
-                    <br/>
-                    {this.state.errors.image && (
-                      <small
-                        className="help is-danger">
-                        {this.state.errors.image}
-                      </small>
-                    )}
-                  </div>
-                </div>
-                <div className="field">
                   <label className="label">Password</label>
                   <div className="control">
                     <input
@@ -121,11 +94,11 @@ class Register extends React.Component {
                   <div className="control">
                     <input
                       className="input"
-                      name="passwordConfirmation"
+                      name="password_confirmation"
                       type="password"
                       placeholder="Confirm Password"
                       onChange={this.handleChange}
-                      value={this.state.data.passwordConfirmation || ''}
+                      value={this.state.data.password_confirmation || ''}
                     />
                     {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
 
