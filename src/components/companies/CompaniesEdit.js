@@ -14,6 +14,7 @@ class CompaniesEdit extends React.Component {
       errors: ''
     }
 
+  
     this.handleChange = this.handleChange.bind(this)
     this.suggestionSelect = this.suggestionSelect.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
