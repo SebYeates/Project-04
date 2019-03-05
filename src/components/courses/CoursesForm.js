@@ -9,7 +9,6 @@ const CoursesForm = ({ data, handleChange, handleSubmit, errors, suggestionSelec
   return (
     <div className="container">
       <div className="column is-6 is-offset-3 ">
-        <h3 className="title has-text-centered">Add Your Course</h3>
         <div className="box">
           <form onSubmit={handleSubmit}>
             <div className="field">

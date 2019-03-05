@@ -65,17 +65,16 @@ class CoursesShow extends React.Component {
             </div>
             <div className="column">
               <div className="content">
-                <h4 className="title is-4">Address</h4>
-                <p> {address}</p>
-                <h4 className="title is-4">Category: {category}</h4>
-                <h4 className="title is-4">Description</h4>
-                <p> {description}</p>
-                <h4 className="title is-4">Company</h4>
-                <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
-                <h4 className="title is-4">Start Date</h4>
+                <h4 className="title is-4">Start Date:</h4>
                 <p> {start_date}</p>
-                <h4 className="title is-4">End Date</h4>
+                <h4 className="title is-4">End Date:</h4>
                 <p> {end_date}</p>
+                <h4 className="title is-4">Company:</h4>
+                <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
+                <h4 className="title is-4">Address:</h4>
+                <p> {address}</p>
+                <h4 className="title is-4">Description:</h4>
+                <p> {description}</p>
                 <hr/>
                 {Auth.canEdit(company.user.id) && (
                   <div>

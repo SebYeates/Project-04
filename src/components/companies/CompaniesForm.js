@@ -9,7 +9,6 @@ const CompaniesForm = ({ data, handleChange, handleSubmit, errors, suggestionSel
   return (
     <div className="container">
       <div className="column is-6 is-offset-3 ">
-        <h3 className="title has-text-centered">Create Your Company</h3>
         <div className="box">
           <form onSubmit={handleSubmit}>
             <div className="field">

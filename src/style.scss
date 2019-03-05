@@ -83,11 +83,12 @@ button.homesecond, button.home {
   color: white;
   justify-content: center;
   border-radius: 20px;
-  border: 3px solid white;
+  border: 1.5px solid white;
   background-color: transparent;
   margin: 10px;
-
   left: 5%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+  background: rgba(0,0,0,0.8);
 }
 
 
@@ -124,6 +125,12 @@ textarea.textarea {
 
 // ----------------- Image column Styling -----------------
 
+img{
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+  background: rgba(0,0,0,0.8);
+}
+
 .isImage {
   text-align: center;
   max-height: 400px;
@@ -142,6 +149,8 @@ textarea.textarea {
     margin: 5px;
   }
 }
+
+
 
 //---------------- hover effect on Courses/Companies index ----------------- >
 
@@ -208,31 +217,7 @@ textarea.textarea {
 
 
 //--------------------- MAP Styling -------------------------
-.mapboxgl-popup {
-  max-width: 170px;
-  border-radius: 10px;
-  & h4 {
-    margin: 5px 2px 5px 2px;
-    color: $dark;
-    font-family: "Quicksand", sans-serif;
-    text-align: center;
 
-  }
-  & a {
-    margin: 2px;
-    font-family: "Quicksand", sans-serif;
-    border-radius: 20px;
-    border: 1px solid $dark;
-    background-color: transparent;
-    padding: 4px;
-
-  }
-  & .event-image {
-    max-height: 70px;
-    display: flex;
-    justify-content: center;
-  }
-}
 
 input.react-mapbox-ac-input {
   margin-bottom: 10px;
@@ -336,6 +321,7 @@ a.button.pill {
   border: 1px solid $primary;
   background-color: transparent;
   margin: 0 5px 5px 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
 }
 
 .course-form{

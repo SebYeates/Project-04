@@ -68,6 +68,7 @@ class CompaniesNew extends React.Component {
   render() {
     return(
       <div className="section">
+        <h3 className="title has-text-centered">Create Your Company</h3>
         <CompaniesForm
           data={this.state.data}
           errors={this.state.errors}

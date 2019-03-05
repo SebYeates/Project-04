@@ -14,7 +14,7 @@ class CompaniesEdit extends React.Component {
       errors: ''
     }
 
-  
+
     this.handleChange = this.handleChange.bind(this)
     this.suggestionSelect = this.suggestionSelect.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -66,6 +66,7 @@ class CompaniesEdit extends React.Component {
   render() {
     return(
       <div className="section">
+        <h3 className="title has-text-centered">Edit Your Company</h3>
         <CompaniesForm
           data={this.state.data}
           errors={this.state.errors}

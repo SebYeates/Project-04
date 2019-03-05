@@ -65,6 +65,7 @@ class CoursesEdit extends React.Component {
   render() {
     return(
       <div className="section">
+        <h3 className="title has-text-centered">Edit Your Course</h3>
         <CoursesForm
           data={this.state.data}
           errors={this.state.errors}
