@@ -16,7 +16,7 @@ class CompaniesNew extends React.Component {
       errors: ''
     }
 
-    console.log('HERERE', this.state)
+    console.log('this.props', this.state.data)
 
     this.handleChange = this.handleChange.bind(this)
     // this.handleMultiChange = this.handleMultiChange.bind(this)
@@ -42,12 +42,6 @@ class CompaniesNew extends React.Component {
     this.setState({ data, errors })
   }
 
-  // handleMultiChange(e) {
-  //   const courses = e.map(course => course.value)
-  //   const data = {...this.state.data, courses: courses }
-  //   const errors = { ...this.state.errors, courses: '' }
-  //   this.setState({ data, errors })
-  // }
 
   handleSubmit(e) {
     e.preventDefault()
@@ -82,6 +76,7 @@ class CompaniesNew extends React.Component {
           suggestionSelect={this.suggestionSelect}
           handleSubmit={this.handleSubmit}
         />
+        <h3 className="has-text-centered"> Note: If you arleady added a company you can only Edit from your company show page.</h3>
       </div>
     )
   }

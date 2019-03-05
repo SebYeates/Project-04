@@ -16,6 +16,7 @@ class Company(db.Model, BaseModel):
 
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = db.relationship('User', backref=backref('company', uselist=False))
+    # user = db.relationship('User', uselist=False, backref=backref('company'))
 
 
 class CompanySchema(ma.ModelSchema, BaseSchema):

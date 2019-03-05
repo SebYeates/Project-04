@@ -86,11 +86,11 @@ class Navbar extends React.Component {
                   </a>
                   <div className="navbar-dropdown">
                     <Link to="/courses/new" className="navbar-item has-text-black">
-                     Your Courses
+                     All your Courses
                     </Link>
                     <hr className="navbar-divider" />
                     <Link to="/companies/new" className="navbar-item has-text-black">
-                     Your Company
+                     One Company
                     </Link>
                   </div>
                 </div>}

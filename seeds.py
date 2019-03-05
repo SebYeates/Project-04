@@ -114,6 +114,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Aldenham Reservoir, Aldenham Road, Elstree, Borehamwood, Hertfordshire, WD6 3BD, UK'
         )
     db.session.add(Copmcrew1)
@@ -125,6 +127,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(Copmcrew2)
@@ -136,6 +140,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(Copmcrew3)
@@ -147,6 +153,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(Copmcrew4)
@@ -158,6 +166,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bradford, NW9 8SA, UK'
         )
     db.session.add(Copmcrew5)
@@ -169,6 +179,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Copmcrew6)
@@ -180,6 +192,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Mercury Yacht Harbour, Satchell Lane, Hamble Southampton SO31 4HQ'
         )
     db.session.add(Copmcrew7)
@@ -191,6 +205,8 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Falmouth Marina North Parade Falmouth Cornwall TR11 2TD'
         )
     db.session.add(Copmcrew8)
@@ -202,6 +218,8 @@ with app.app_context():
         category='Motor Cruising',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Aldenham Reservoir, Aldenham Road, Elstree, Borehamwood, Hertfordshire, WD6 3BD, UK'
         )
     db.session.add(addition1)
@@ -213,6 +231,8 @@ with app.app_context():
         category='Navigation & Seamanship Theory',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(addition2)
@@ -224,6 +244,8 @@ with app.app_context():
         category='Specialist Short Courses',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(addition3)
@@ -235,6 +257,8 @@ with app.app_context():
         category='Powerboat',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(addition4)
@@ -246,6 +270,8 @@ with app.app_context():
         category='Dinghy, Multihull & Small Keelboats',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bradford, NW9 8SA, UK'
         )
     db.session.add(addition5)
@@ -257,6 +283,8 @@ with app.app_context():
         category='Windsurfing',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(addition6)
@@ -268,6 +296,8 @@ with app.app_context():
         category='Inland Waterways',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Mercury Yacht Harbour, Satchell Lane, Hamble Southampton SO31 4HQ'
         )
     db.session.add(addition7)
@@ -279,6 +309,8 @@ with app.app_context():
         category='Certificates of Competence',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Falmouth Marina North Parade Falmouth Cornwall TR11 2TD'
         )
     db.session.add(addition8)
@@ -292,6 +324,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Aldenham Reservoir, Aldenham Road, Elstree, Borehamwood, Hertfordshire, WD6 3BD, UK'
         )
     db.session.add(Online1)
@@ -303,6 +337,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(Online2)
@@ -314,6 +350,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(Online3)
@@ -325,6 +363,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(Online4)
@@ -336,6 +376,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Online5)
@@ -347,6 +389,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Online6)
@@ -358,6 +402,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Mercury Yacht Harbour, Satchell Lane, Hamble Southampton SO31 4HQ'
         )
     db.session.add(Online7)
@@ -369,6 +415,8 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
+        start_date='02/03/2019',
+        end_date='05/03/2019',
         address='Falmouth Marina North Parade Falmouth Cornwall TR11 2TD'
         )
     db.session.add(Online8)

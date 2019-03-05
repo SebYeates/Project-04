@@ -3,6 +3,7 @@ import jwt
 from config.environment import secret
 from app import db, ma, bcrypt
 from sqlalchemy.ext.hybrid import hybrid_property
+# from sqlalchemy.orm import backref
 from marshmallow import validates_schema, ValidationError, fields, validate
 from .base import BaseModel, BaseSchema
 
@@ -13,6 +14,9 @@ class User(db.Model, BaseModel):
     username = db.Column(db.String(20), nullable=False, unique=True)
     email = db.Column(db.String(128), nullable=True, unique=True)
     password_hash = db.Column(db.String(128), nullable=True)
+
+    # company_id = db.Column(db.Integer, db.ForeignKey('company.id'))
+    # company = db.relationship('Company', backref=backref('user'))
 
     @hybrid_property
     def password(self):

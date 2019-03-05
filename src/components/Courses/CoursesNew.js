@@ -81,6 +81,7 @@ class CoursesNew extends React.Component {
           location={location}
           userLocation={this.state.userLocation}
         />
+        <h3 className="has-text-centered"> Note: You can Edit and Delete your Course from your Course show page.</h3>
       </div>
     )
   }

@@ -21,6 +21,9 @@ def show(company_id):
 @secure_route
 def create():
 
+    if g.current_user.company:
+        return jsonify({'message': 'User already has a company'}), 400
+
     company, errors = company_schema.load(request.get_json())
 
     if errors:
