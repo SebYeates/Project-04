@@ -29,7 +29,7 @@ def create():
     course.company = g.current_user.company
 
     if g.current_user.company is None:
-        return jsonify({'message': 'Unauthorized'}), 401
+        return jsonify({'message': 'You Need a Company to make Courses'}), 400
 
     course.save()
 

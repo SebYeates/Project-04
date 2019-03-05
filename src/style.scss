@@ -246,63 +246,6 @@ input.react-mapbox-ac-input {
   padding-right: 1.5rem;
 }
 
-.map {
-  height: 320px;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.All{
-  height: 50px;
-  width: 50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.piccourses{
-  background-image: url(/assets/images/diamond.svg);
-}
-
-.Sail{
-  background-image: url(/assets/images/Sail.svg);
-}
-
-.Motor{
-  background-image: url(/assets/images/Motor.svg);
-}
-
-.Navigation{
-  background-image: url(/assets/images/Navigation.svg);
-}
-
-.Specialist{
-  background-image: url(/assets/images/Specialist.svg);
-}
-
-.Powerboat{
-  background-image: url(/assets/images/Powerboat.svg);
-}
-
-.Dingy{
-  background-image: url(/assets/images/Dingy.svg);
-}
-
-.Windsurfing{
-  background-image: url(/assets/images/Windsurfing.svg);
-}
-
-.Inland{
-  background-image: url(/assets/images/Inland.svg);
-}
-
-.Competence {
-  background-image: url(/assets/images/Competence .svg);
-}
-
-.online{
-  background-image: url(/assets/images/online.svg);
-}
-
 //------------------------------------------------------
 
 nav.navbar .home{
@@ -398,59 +341,3 @@ a.button.pill {
 .course-form{
   margin-top: 10px;
 }
-// User page styling
-
-.user-header{
-  > .container{
-    > .columns{
-      > .column{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h2{
-          padding-top: 20px;
-        }
-      }
-    }
-  }
-}
-
-.is-title-light{
-  font-weight: 300;
-}
-
-.content{
-  .is-title-light{
-    font-weight: 300;
-  }
-}
-
-button.followBtn {
-  color: white;
-  font-size: 16px;
-  padding: 6px;
-  justify-content: center;
-  border-radius: 20px;
-  border: 1px solid white;
-  background-color: transparent;
-  margin-bottom: 12px;
-}
-
-.added-by{
-  position: relative;
-  display: flex;
-  margin-top: 20px;
-  .user-logo{
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    bottom: 0;
-    margin-left: 5px;
-    border-radius: 25px;
-  }
-}
-
-
-// ICONS LICENCE REFF ...
-// <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
