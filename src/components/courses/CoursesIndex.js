@@ -63,7 +63,7 @@ class CoursesIndex extends React.Component {
       <section className="section">
         <div className="container">
           <section className="section">
-            <h2 className="title has-text-centered is-title-light is-size-2">The Courses</h2>
+            <h2 className="title has-text-centered is-title-light is-size-2">Search Courses</h2>
           </section>
           <hr />
           <CoursesSearchForm handleChange={this.handleChange} />
