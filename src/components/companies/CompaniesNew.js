@@ -5,6 +5,8 @@ import Auth from '../../lib/Auth'
 
 import CompaniesForm from './CompaniesForm'
 
+
+
 class CompaniesNew extends React.Component {
   constructor() {
     super()
@@ -13,6 +15,8 @@ class CompaniesNew extends React.Component {
       data: {},
       errors: ''
     }
+
+    console.log('HERERE', this.state)
 
     this.handleChange = this.handleChange.bind(this)
     // this.handleMultiChange = this.handleMultiChange.bind(this)

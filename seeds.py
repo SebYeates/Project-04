@@ -125,7 +125,7 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK'
+        address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(Copmcrew2)
 
@@ -136,7 +136,7 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK'
+        address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(Copmcrew3)
 
@@ -147,7 +147,7 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
-        address='Birchen Grove, London, NW9 8SA, UK'
+        address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(Copmcrew4)
 
@@ -158,7 +158,7 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bradford, NW9 8SA, UK'
         )
     db.session.add(Copmcrew5)
 
@@ -169,7 +169,7 @@ with app.app_context():
         category='Sail Cruising',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Copmcrew6)
 
@@ -213,7 +213,7 @@ with app.app_context():
         category='Navigation & Seamanship Theory',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK'
+        address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(addition2)
 
@@ -224,7 +224,7 @@ with app.app_context():
         category='Specialist Short Courses',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK'
+        address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(addition3)
 
@@ -235,7 +235,7 @@ with app.app_context():
         category='Powerboat',
         lat=0,
         lng=0,
-        address='Birchen Grove, London, NW9 8SA, UK'
+        address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(addition4)
 
@@ -246,7 +246,7 @@ with app.app_context():
         category='Dinghy, Multihull & Small Keelboats',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bradford, NW9 8SA, UK'
         )
     db.session.add(addition5)
 
@@ -257,7 +257,7 @@ with app.app_context():
         category='Windsurfing',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(addition6)
 
@@ -303,7 +303,7 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK'
+        address='old Oak Lane, West Hendon, Bristol, NW9 7ND, UK'
         )
     db.session.add(Online2)
 
@@ -314,7 +314,7 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
-        address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK'
+        address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK'
         )
     db.session.add(Online3)
 
@@ -325,7 +325,7 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
-        address='Birchen Grove, London, NW9 8SA, UK'
+        address='Birchen Grove, Cambridge, NW9 8SA, UK'
         )
     db.session.add(Online4)
 
@@ -336,7 +336,7 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Online5)
 
@@ -347,7 +347,7 @@ with app.app_context():
         category='Take courses online',
         lat=0,
         lng=0,
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK'
+        address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK'
         )
     db.session.add(Online6)
 
@@ -392,7 +392,7 @@ with app.app_context():
         name="Training Ship Broadsword - Sea Training Corps",
         description="From small clubs specialising in particular classes through to large clubs. visit their website to find out more.",
         image='/assets/images/unnamed.jpg',
-        address='Cool Oak Lane, West Hendon, London, NW9 7ND, UK',
+        address='Cool Oak Lane, West Hendon, Bristol, NW9 7ND, UK',
         lat=0,
         lng=0,
         courses=[Copmcrew2, Online2, addition2],
@@ -404,7 +404,7 @@ with app.app_context():
         name="Phoenix Outdoor Centre",
         description="From small clubs specialising in particular classes through to large clubs. visit their website to find out more.",
         image='/assets/images/unnamed.jpg',
-        address='Cool Oak Lane, West Hendon, London, NW9 7NN, UK',
+        address='Cool Oak Lane, West Hendon, Canterbury, NW9 7NN, UK',
         lat=0,
         lng=0,
         courses=[Copmcrew3, Online3, addition3],
@@ -416,7 +416,7 @@ with app.app_context():
         name="Wembley Sailing",
         description="From small clubs specialising in particular classes through to large clubs. visit their website to find out more.",
         image='/assets/images/unnamed.jpg',
-        address='Birchen Grove, London, NW9 8SA, UK',
+        address='Birchen Grove, Cambridge, NW9 8SA, UK',
         lat=0,
         lng=0,
         courses=[Copmcrew4, Online4, addition4],
@@ -428,7 +428,7 @@ with app.app_context():
         name="Broadsword Sailing",
         description="From small clubs specialising in particular classes through to large clubs. visit their website to find out more.",
         image='/assets/images/unnamed.jpg',
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK',
+        address='Welsh Harp Reservoir, Birchen Grove, Bradford, NW9 8SA, UK',
         lat=0,
         lng=0,
         courses=[Copmcrew5, Online5, addition5],
@@ -440,7 +440,7 @@ with app.app_context():
         name="Welsh Harp Sailing Club",
         description="From small clubs specialising in particular classes through to large clubs. visit their website to find out more.",
         image='/assets/images/unnamed.jpg',
-        address='Welsh Harp Reservoir, Birchen Grove, London, NW9 8SA, UK',
+        address='Welsh Harp Reservoir, Birchen Grove, Bath, NW9 8SA, UK',
         lat=0,
         lng=0,
         courses=[Copmcrew6, Online6, addition6],
