@@ -22,10 +22,14 @@ def show(course_id):
 def create():
 
     course, errors = course_schema.load(request.get_json())
-    course.company = g.current_user.company
 
     if errors:
         return jsonify(errors), 422
+
+    course.company = g.current_user.company
+
+    if g.current_user.company is None:
+        return jsonify({'message': 'Unauthorized'}), 401
 
     course.save()
 
@@ -38,7 +42,7 @@ def update(course_id):
 
     course = Course.query.get(course_id)
 
-    if course.user != g.current_user:
+    if course.company.user != g.current_user:
         return jsonify({'message': 'Unauthorized'}), 401
 
     course, errors = course_schema.load(request.get_json(), instance=course)
@@ -56,7 +60,7 @@ def delete(course_id):
 
     course = Course.query.get(course_id)
 
-    if course.user != g.current_user:
+    if course.company.user != g.current_user:
         return jsonify({'message': 'Unauthorized'}), 401
 
     course.remove()

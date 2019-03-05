@@ -23,42 +23,37 @@ class CoursesEdit extends React.Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
     this.suggestionSelect = this.suggestionSelect.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange({ target: { name, value } }) {
-    if(name === 'location'){
-      console.log('location')
-    }
-
     const data = {...this.state.data, [name]: value }
     const errors = { ...this.state.errors, [name]: '' }
     this.setState({ data, errors })
   }
 
-  suggestionSelect(result, lat, lng, text) {
-    console.log(lat, lng)
+  suggestionSelect(result, lat, lng) {
     const data = {
       ...this.state.data,
       lat: lat,
       lng: lng,
-      address: result,
-      text
+      address: result
     }
     const errors = { ...this.state.errors, lat: '', lng: '' }
 
-    this.setState({ data, errors })
+    this.setState({data, errors})
   }
 
   handleSubmit(e) {
     e.preventDefault()
+    console.log(this.state.data)
     axios
       .put(`/api/courses/${this.props.match.params.id}`, this.state.data, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
       .then(() => this.props.history.push('/courses'))
-      .catch((err) => this.setState({ errors: err.response.data }))
+      .catch((err) => this.setState({errors: err.response.data}))
   }
 
   componentDidMount(){
