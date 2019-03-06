@@ -61,18 +61,18 @@ class CoursesShow extends React.Component {
             <div className="column">
               <figure className="image is-4by2">
                 <img src={image} alt={name} />
+
               </figure>
             </div>
             <div className="column">
               <div className="content">
-                <h4 className="title is-4">Start Date:</h4>
-                <p> {start_date}</p>
-                <h4 className="title is-4">End Date:</h4>
-                <p> {end_date}</p>
-                <h4 className="title is-4">Company:</h4>
-                <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
+                <h4 className="title is-4">Category: <span className='subtitle is-6'> {category}</span></h4>
+                <h4 className="title is-4">Start Date: <span className='subtitle is-6'> {start_date}</span></h4>
+                <h4 className="title is-4">End Date: <span className='subtitle is-6'> {end_date}</span></h4>
                 <h4 className="title is-4">Address:</h4>
                 <p> {address}</p>
+                <h4 className="title is-4">Company: </h4>
+                <Link to={`/companies/${company.id}`} className="button pill is-rounded" key={company.id}> {company.name} </Link>
                 <h4 className="title is-4">Description:</h4>
                 <p> {description}</p>
                 <hr/>

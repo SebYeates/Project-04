@@ -136,13 +136,13 @@ img{
   max-height: 400px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
   background: rgba(0,0,0,0.8);
-  border-radius: 10px;
+  border-radius: 15px 50px;
   margin: 10px;
   transition: all .2s ease-in-out;
   .image img{
     height: 100%;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 15px 50px;
   }
   &:hover {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.3);

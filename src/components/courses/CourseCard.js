@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const CourseCard = ({ id, name, image, address, start_date }) => {
-  console.log(id, name, image, address, start_date)
   return (
     <Link to={`/courses/${id}`}>
       <div className="isImage">
