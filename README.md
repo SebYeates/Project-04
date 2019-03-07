@@ -8,12 +8,12 @@ You can find a hosted version here ----> https://syeates-course-finder.herokuapp
 7 days
 
 ### Technologies used
-Python
-Flask
-SQLAlchemy
-PostgreSQL
-React.js
-JavaScript (ES6) / HTML5 / SCSS
-JWT
-Git / GitHub
-Bulma CSS Framework
+ * Python
+ * Flask
+ * SQLAlchemy
+ * PostgreSQL
+ * React.js
+ * JavaScript (ES6) / HTML5 / SCSS
+ * JWT
+ * Git / GitHub
+ * Bulma CSS Framework
